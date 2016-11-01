@@ -10,7 +10,7 @@ public class StubDaoFactory extends DaoFactory {
 
     @Override
     public UserDao getUserDao() {
-        return null;
+        return new StubUserDao();
     }
 
 }
