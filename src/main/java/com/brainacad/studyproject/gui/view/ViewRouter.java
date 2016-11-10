@@ -10,20 +10,32 @@ import static com.brainacad.studyproject.gui.view.View.LOGIN;
  * Created by User on 11/8/2016.
  */
 public class ViewRouter {
+
     private static ViewRouter instance;
     private static ViewFactory viewFactory = ViewFactory.getInstance();
+
+    private boolean started;
     private JFrame mainFrame;
+
     private ViewRouter() {
         mainFrame = new MainFrame();
-        mainFrame.setContentPane(viewFactory.getView(LOGIN).getContent());
-        mainFrame.setVisible(true);
     }
+
     public static ViewRouter getInstance() {
         if (instance == null) {
             instance = new ViewRouter();
         }
         return instance;
     }
+
+    public void start() {
+        if (!started) {
+            mainFrame.setContentPane(viewFactory.getView(LOGIN).getContent());
+            mainFrame.setVisible(true);
+            started = true;
+        }
+    }
+
     public void switchView(View prev, View next) {
         RefreshableView prevView = viewFactory.getView(prev);
         RefreshableView nextView = viewFactory.getView(next);

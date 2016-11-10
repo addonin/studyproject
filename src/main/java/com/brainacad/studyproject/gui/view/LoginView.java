@@ -70,11 +70,6 @@ public class LoginView extends RefreshableView {
     }
 
     @Override
-    public JPanel getContent() {
-        return content;
-    }
-
-    @Override
     public void refresh() {
         usernameField.setText("");
         passwordField.setText("");
