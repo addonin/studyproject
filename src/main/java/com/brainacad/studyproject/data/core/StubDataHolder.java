@@ -20,11 +20,13 @@ public class StubDataHolder {
     public static void createData() {
         if (!created) {
             User admin = new User();
+            admin.setId(1);
             admin.setUsername("admin");
             admin.setPassword("admin");
             admin.setRole(ADMIN);
 
             User user = new User();
+            user.setId(2);
             user.setUsername("user");
             user.setPassword("user");
             user.setRole(USER);

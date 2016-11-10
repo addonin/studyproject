@@ -20,4 +20,28 @@ public class StubUserDao implements UserDao {
         return null;
     }
 
+    @Override
+    public User get(int id) {
+        return null;
+    }
+
+    @Override
+    public int add(User entity) {
+        return 0;
+    }
+
+    @Override
+    public boolean delete(int id) {
+        return false;
+    }
+
+    @Override
+    public boolean update(User entity) {
+        return false;
+    }
+
+    @Override
+    public Collection<User> getAll() {
+        return StubDataHolder.getUsers();
+    }
 }

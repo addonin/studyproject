@@ -9,6 +9,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Collection;
 
 import static com.brainacad.studyproject.data.domain.Role.ADMIN;
 import static com.brainacad.studyproject.data.domain.Role.USER;
@@ -46,4 +47,28 @@ public class JdbcUserDao implements UserDao {
         return user;
     }
 
+    @Override
+    public User get(int id) {
+        return null;
+    }
+
+    @Override
+    public int add(User entity) {
+        return 0;
+    }
+
+    @Override
+    public boolean delete(int id) {
+        return false;
+    }
+
+    @Override
+    public boolean update(User entity) {
+        return false;
+    }
+
+    @Override
+    public Collection<User> getAll() {
+        return null;
+    }
 }
