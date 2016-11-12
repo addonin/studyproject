@@ -22,11 +22,18 @@ public class StubUserDao implements UserDao {
 
     @Override
     public User get(int id) {
+        Collection<User> users = StubDataHolder.getUsers();
+        for (User user : users) {
+            if (user.getId() == id) {
+                return user;
+            }
+        }
         return null;
     }
 
     @Override
     public int add(User entity) {
+        //TODO: put user into stub collection
         return 0;
     }
 

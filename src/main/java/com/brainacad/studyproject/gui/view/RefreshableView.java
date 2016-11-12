@@ -15,7 +15,7 @@ public abstract class RefreshableView {
         return content;
     }
 
-    public abstract void refresh();
+    public abstract void refresh(Object ... params);
 
 }
 

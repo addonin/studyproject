@@ -11,4 +11,8 @@ public interface UserService {
 
     Collection<User> getAllUsers();
 
+    User getUserById(int id);
+
+    int addUser(User user);
+
 }

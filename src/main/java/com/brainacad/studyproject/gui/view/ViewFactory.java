@@ -31,6 +31,12 @@ public class ViewFactory {
             case USERS:
                 holder.putIfAbsent(type, new UsersView());
                 return holder.get(type);
+            case EDIT_USER:
+                holder.putIfAbsent(type, new EditUserView());
+                return holder.get(type);
+            case ADD_USER:
+                holder.putIfAbsent(type, new AddUserView());
+                return holder.get(type);
             default:
                 throw new RuntimeException("TODO");
         }
