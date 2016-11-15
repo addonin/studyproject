@@ -11,6 +11,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import static com.brainacad.studyproject.gui.view.View.ADD_USER;
+import static com.brainacad.studyproject.gui.view.View.USERS;
 
 /**
  * Created by User on 11/12/2016.
@@ -64,7 +65,13 @@ public class AddUserView extends RefreshableView {
                 user.setUsername(username);
                 user.setPassword(password);
                 user.setRole(Role.USER);
-                userService.addUser(user);
+
+                if (userService.addUser(user) == 0) {
+                    JOptionPane.showMessageDialog(null, "Failed to create user");
+                } else {
+                    ViewRouter viewRouter = ViewRouter.getInstance();
+                    viewRouter.switchView(ADD_USER, USERS);
+                }
             }
         });
     }

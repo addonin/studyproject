@@ -55,6 +55,7 @@ public class UsersView extends RefreshableView {
 
     @Override
     public void refresh(Object ... params) {
+        tableModel.setRowCount(0);
         Collection<User> users = userService.getAllUsers();
         users.forEach(new Consumer<User>() {
             @Override

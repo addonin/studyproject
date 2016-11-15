@@ -5,6 +5,7 @@ import com.brainacad.studyproject.data.dao.UserDao;
 import com.brainacad.studyproject.data.domain.User;
 
 import java.util.Collection;
+import java.util.Iterator;
 
 /**
  * Created by User on 11/1/2016.
@@ -33,17 +34,33 @@ public class StubUserDao implements UserDao {
 
     @Override
     public int add(User entity) {
-        //TODO: put user into stub collection
-        return 0;
+        return StubDataHolder.add(entity);
     }
 
     @Override
     public boolean delete(int id) {
+        Collection<User> users = StubDataHolder.getUsers();
+        Iterator<User> iterator = users.iterator();
+        while (iterator.hasNext()) {
+            User user = iterator.next();
+            if (user.getId() == id) {
+                iterator.remove();
+                return true;
+            }
+        }
         return false;
     }
 
     @Override
     public boolean update(User entity) {
+        Collection<User> users = StubDataHolder.getUsers();
+        for (User user : users) {
+            if (user.getId() == entity.getId()) {
+                user.setUsername(entity.getUsername());
+                user.setPassword(entity.getPassword());
+                return true;
+            }
+        }
         return false;
     }
 

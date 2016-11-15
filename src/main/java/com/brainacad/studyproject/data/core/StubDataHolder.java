@@ -39,6 +39,12 @@ public class StubDataHolder {
         }
     }
 
+    public static int add(User user) {
+        if (users.add(user)) {
+            return user.getId();
+        } else return 0;
+    }
+
     public static Collection<User> getUsers() {
         return users;
     }
