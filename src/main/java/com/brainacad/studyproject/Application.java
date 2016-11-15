@@ -13,13 +13,7 @@ import java.util.Date;
 public class Application {
 
     public static void main(String[] args) {
-        StubDataHolder.createData();
-        EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                ViewRouter viewRouter = ViewRouter.getInstance();
-                viewRouter.start();
-            }
-        });
+        ApplicationInitializer.initialize();
     }
 
 }
