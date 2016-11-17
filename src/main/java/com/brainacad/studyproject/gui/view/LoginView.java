@@ -1,5 +1,6 @@
 package com.brainacad.studyproject.gui.view;
 
+import com.brainacad.studyproject.gui.ViewRouter;
 import com.brainacad.studyproject.service.LoginService;
 import com.brainacad.studyproject.service.impl.LoginServiceImpl;
 
@@ -54,6 +55,7 @@ public class LoginView extends RefreshableView {
                 String password = passwordField.getText().trim();
                 boolean login = loginService.login(username, password);
                 if (login) {
+                    //TODO: check if ADMIN or USER? switch to USERS or ADS
                     ViewRouter viewRouter = ViewRouter.getInstance();
                     viewRouter.switchView(getName(), USERS);
                 } else {

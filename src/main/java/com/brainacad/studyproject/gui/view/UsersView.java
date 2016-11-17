@@ -1,6 +1,7 @@
 package com.brainacad.studyproject.gui.view;
 
 import com.brainacad.studyproject.data.domain.User;
+import com.brainacad.studyproject.gui.ViewRouter;
 import com.brainacad.studyproject.gui.editor.UserEditButtonEditor;
 import com.brainacad.studyproject.gui.renderer.TableButtonCellRenderer;
 import com.brainacad.studyproject.service.UserService;

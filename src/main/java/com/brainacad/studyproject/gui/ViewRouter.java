@@ -1,6 +1,7 @@
-package com.brainacad.studyproject.gui.view;
+package com.brainacad.studyproject.gui;
 
-import com.brainacad.studyproject.gui.MainFrame;
+import com.brainacad.studyproject.gui.view.RefreshableView;
+import com.brainacad.studyproject.gui.view.View;
 
 import javax.swing.*;
 

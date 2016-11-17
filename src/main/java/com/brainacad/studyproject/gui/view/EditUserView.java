@@ -1,6 +1,7 @@
 package com.brainacad.studyproject.gui.view;
 
 import com.brainacad.studyproject.data.domain.User;
+import com.brainacad.studyproject.gui.ViewRouter;
 import com.brainacad.studyproject.service.UserService;
 import com.brainacad.studyproject.service.impl.UserServiceImpl;
 

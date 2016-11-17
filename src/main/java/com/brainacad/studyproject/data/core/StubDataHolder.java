@@ -15,7 +15,7 @@ import static com.brainacad.studyproject.data.domain.Role.USER;
 public class StubDataHolder {
 
     private static Collection<User> users;
-
+    //TODO: add collection with advertisement
     private static boolean created = false;
 
     public static void createData() {
@@ -35,6 +35,8 @@ public class StubDataHolder {
             users = new HashSet();
             users.add(admin);
             users.add(user);
+
+            //TODO: fill ad collection
 
             created = true;
         }

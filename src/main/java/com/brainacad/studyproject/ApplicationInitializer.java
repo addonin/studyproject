@@ -2,7 +2,7 @@ package com.brainacad.studyproject;
 
 import com.brainacad.studyproject.data.core.JdbcConnectionPool;
 import com.brainacad.studyproject.data.core.StubDataHolder;
-import com.brainacad.studyproject.gui.view.ViewRouter;
+import com.brainacad.studyproject.gui.ViewRouter;
 import com.brainacad.studyproject.util.ApplicationUtils;
 
 import java.awt.*;

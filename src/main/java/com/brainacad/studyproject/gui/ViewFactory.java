@@ -1,4 +1,6 @@
-package com.brainacad.studyproject.gui.view;
+package com.brainacad.studyproject.gui;
+
+import com.brainacad.studyproject.gui.view.*;
 
 import java.util.HashMap;
 import java.util.Map;

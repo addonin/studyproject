@@ -16,6 +16,7 @@ import static com.brainacad.studyproject.util.ApplicationConstants.STUB;
 public abstract class DaoFactory {
 
     public abstract UserDao getUserDao();
+    //TODO: getAdDao();
 
     public static DaoFactory getDaoFactory() {
         Properties properties = ApplicationUtils.readAppConfig();

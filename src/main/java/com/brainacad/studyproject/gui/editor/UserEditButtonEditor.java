@@ -1,6 +1,6 @@
 package com.brainacad.studyproject.gui.editor;
 
-import com.brainacad.studyproject.gui.view.ViewRouter;
+import com.brainacad.studyproject.gui.ViewRouter;
 
 import javax.swing.*;
 import java.awt.*;
