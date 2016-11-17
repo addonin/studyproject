@@ -61,7 +61,6 @@ public class AddUserView extends RefreshableView {
                 String username = usernameField.getText();
                 String password = passwordField.getText();
                 User user = new User();
-                user.setId(Integer.parseInt(userId));
                 user.setUsername(username);
                 user.setPassword(password);
                 user.setRole(Role.USER);

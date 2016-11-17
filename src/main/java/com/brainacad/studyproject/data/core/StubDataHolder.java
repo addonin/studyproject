@@ -15,6 +15,7 @@ import static com.brainacad.studyproject.data.domain.Role.USER;
 public class StubDataHolder {
 
     private static Collection<User> users;
+
     private static boolean created = false;
 
     public static void createData() {
